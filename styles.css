@@ -1,0 +1,211 @@
+/* Importing custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+    background: #fdfeff;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #5a6f98, #cddc60);
+    color: #fff;
+    padding: 1.5em ;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero, .nutrition, .history, .flavors, .testimonials {
+    background: #fff;
+    margin-bottom: 3%;
+    padding: 3.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(193, 230, 227, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.hero img, .flavor-item img {
+    display: block;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+.hero div, .nutrition div, .history div, .flavors div, .testimonials div {
+    flex: 1;
+    min-width: 300px;
+    height: auto;
+}
+
+.hero h2, .nutrition h2, .history h2, .flavors h2, .testimonials h2 {
+    color: #dc7358;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.nutrition ul {
+    list-style: disc;
+    padding-left: 1.5em;
+}
+
+.nutrition ul li {
+    margin: 0.5em 0;
+    font-weight: 600;
+    background: linear-gradient(135deg, #5a6f98, #9dd4da);
+    padding: 3%;
+    list-style: none;
+}
+
+.flavor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5em;
+}
+
+.flavor-item {
+    background: #e1f5fe;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.flavor-item:hover {
+    transform: translateY(-10px);
+}
+
+.flavor-item h3 {
+    color: #ed7373;
+    font-size: 1.5em;
+}
+
+.testimonial-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+}
+
+.testimonial-item {
+    background: #c4ccd0;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(107, 204, 223, 0.1);
+}
+
+footer {
+    background:#d0cbcd;
+    color: #d32222;
+    padding: 2.5em 0;
+    text-align: center;
+}
+
+.footer-content {
+    text-align: center;
+    color: #333;
+}
+
+footer img {
+    max-width: 120px;
+    margin-bottom: 1.5em;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+footer form label {
+    margin-top: 1em;
+}
+
+footer form input[type="text"],
+footer form input[type="email"] {
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+}
+
+footer form input[type="submit"] {
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    background: #4a90e2;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+footer form input[type="submit"]:hover {
+    background: #357ab8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero, .nutrition, .history, .flavors, .testimonials {
+        padding: 1.5em;
+        flex-direction: column;
+    }
+
+    .hero img, .flavor-item img {
+        max-width: 100%;
+    }
+
+    footer form input[type="text"], footer form input[type="email"] {
+        width: 100%;
+    }
+}
